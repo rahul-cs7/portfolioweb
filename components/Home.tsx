@@ -7,7 +7,7 @@ import ContactForm from "./ContactForm";
 import { Icon } from "./Icons";
 import ProjectCard from "./ProjectCard";
 import type { Project, Skill } from "@/lib/types";
-import BrandMark from "./BrandMark";
+import Brand from "./Brand";
 
 const chapters = [
   { number: "01", year: "2004 —", title: "Rooted in Bihar", copy: "Curiosity started small: taking things apart, asking why, and imagining what could be built next." },
@@ -62,7 +62,7 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
     <main>
       <header className="nav-wrap">
         <nav className="nav container" aria-label="Primary navigation">
-          <a href="#top" className="brand" aria-label="RahulVerse home"><BrandMark/><span>RAHUL<span className="muted">VERSE</span></span></a>
+          <Brand href="#top" />
           <div className={`nav-links ${menu ? "open" : ""}`}>
             {[{ label: "Story", href: "#story" }, { label: "Skills", href: "#skills" }, { label: "Experience", href: "#experience" }, { label: "Projects", href: "/projects" }, { label: "Research", href: "#research" }, { label: "Contact", href: "#contact" }].map(item => <Link key={item.label} href={item.href} onClick={() => setMenu(false)}>{item.label}</Link>)}
           </div>
@@ -150,7 +150,7 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
         </div>
       </section>
 
-      <footer><div className="container footer-inner"><a href="#top" className="brand"><BrandMark/><span>RAHUL<span className="muted">VERSE</span></span></a><p>Designed & engineered with curiosity.<br/>© 2026 Rahul Kumar.</p><a href="#top">Back to orbit ↑</a></div></footer>
+      <footer><div className="container footer-inner"><Brand href="#top"/><p>Designed & engineered with curiosity.<br/>© 2026 Rahul Kumar.</p><a href="#top">Back to orbit ↑</a></div></footer>
 
       {terminal && <div className="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal"><button className="terminal-backdrop" onClick={() => setTerminal(false)} aria-label="Close terminal"/><div className="terminal-window"><div className="terminal-bar"><span><i/><i/><i/> rahul@verse:~</span><button onClick={() => setTerminal(false)}><Icon name="close"/></button></div><div className="terminal-output">{terminalLines.map((line, i) => <p key={`${line}-${i}`}>{line}</p>)}</div><form onSubmit={runCommand}><span>›</span><input autoFocus value={command} onChange={event => setCommand(event.target.value)} aria-label="Terminal command" autoComplete="off" /></form></div></div>}
     </main>

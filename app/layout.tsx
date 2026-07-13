@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Rahul Kumar is a full-stack developer, researcher, and Computer Science undergraduate building useful digital products.",
   keywords: ["Rahul Kumar", "full stack developer", "MERN", "Java", "AI research", "portfolio"],
   openGraph: { title: "RahulVerse", description: "Engineering ideas into useful digital products.", type: "website" },
+  icons: { icon: "/logoimage.jpeg", apple: "/logoimage.jpeg" },
   robots: { index: true, follow: true },
 };
 
