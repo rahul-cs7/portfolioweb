@@ -91,9 +91,27 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
 
       <section className="story section" id="story">
         <div className="container">
-          <div className="section-heading split-heading"><div><p className="kicker">01 / ORIGIN STORY</p><h2>Every system starts<br/>with a <em>first question.</em></h2></div><p>I didn’t begin with all the answers. I began with an instinct to understand how things work — then learned to build them better.</p></div>
-          <div className="chapters">
-            {chapters.map((chapter, index) => <article className="chapter" key={chapter.number}><div className="chapter-index">{chapter.number}</div><div className="chapter-line"><span/></div><div className="chapter-content"><p>{chapter.year}</p><h3>{chapter.title}</h3><p>{chapter.copy}</p></div><div className={`chapter-orb orb-${index + 1}`}>{index === 0 ? "⌖" : index === 1 ? "</>" : index === 2 ? "UI" : "AI"}</div></article>)}
+          <div className="section-heading split-heading"><div><p className="kicker">01 / ORIGIN STORY</p><h2>A journey shaped<br/>one <em>climb</em> at a time.</h2></div><p>I didn’t begin with all the answers. Each new challenge became another ridge — and every summit revealed a bigger horizon.</p></div>
+          <div className="mountain-journey">
+            <div className="mountain-sky" aria-hidden="true"><span/><i/><b/></div>
+            <svg className="mountain-landscape" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="rearPeak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#3d3a72" stopOpacity=".42"/><stop offset="1" stopColor="#111528" stopOpacity=".12"/></linearGradient>
+                <linearGradient id="frontPeak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#334d6f" stopOpacity=".75"/><stop offset=".45" stopColor="#171c35" stopOpacity=".82"/><stop offset="1" stopColor="#090c16" stopOpacity=".98"/></linearGradient>
+                <linearGradient id="snowLine" x1="0" y1="0" x2="1" y2="0"><stop stopColor="#79e7f5"/><stop offset="1" stopColor="#a58aff"/></linearGradient>
+                <filter id="trailGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <path d="M0 530 L145 390 L255 485 L430 260 L560 415 L735 175 L865 325 L1035 42 L1200 220 L1200 700 L0 700Z" fill="url(#rearPeak)"/>
+              <path d="M0 620 L160 460 L270 555 L440 345 L565 490 L745 250 L865 410 L1038 100 L1200 310 L1200 700 L0 700Z" fill="url(#frontPeak)"/>
+              <path d="M75 610 C170 570 165 505 250 512 S390 435 445 390 S615 380 705 300 S870 275 1018 135" fill="none" stroke="url(#snowLine)" strokeWidth="3" strokeDasharray="5 13" strokeLinecap="round" filter="url(#trailGlow)"/>
+              <path d="M160 460 L202 496 L233 472 L270 555 L160 460 M440 345 L480 390 L515 370 L565 490 L440 345 M745 250 L786 294 L820 272 L865 410 L745 250 M1038 100 L1073 147 L1100 126 L1144 237" fill="rgba(220,248,255,.16)"/>
+            </svg>
+            <div className="summit-flag" aria-hidden="true"><span>RK</span></div>
+            {chapters.map((chapter, index) => <article className={`mountain-stop stop-${index + 1}`} key={chapter.number}>
+              <div className="trail-node"><span>{index === 0 ? "⌖" : index === 1 ? "</>" : index === 2 ? "UI" : "AI"}</span><i/></div>
+              <div className="mountain-card glass"><div className="mountain-meta"><span>CHECKPOINT {chapter.number}</span><b>{chapter.year}</b></div><h3>{chapter.title}</h3><p>{chapter.copy}</p><small>ALT · {620 + index * 740}M</small></div>
+            </article>)}
+            <div className="journey-compass" aria-hidden="true"><span>N</span><i/><small>KEEP CLIMBING</small></div>
           </div>
         </div>
       </section>

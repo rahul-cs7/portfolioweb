@@ -1,13 +1,53 @@
 {
   "skills": [
-    { "id": "javascript", "name": "JavaScript", "type": "Core", "level": 88 },
-    { "id": "nodejs", "name": "Node.js", "type": "Backend", "level": 84 },
-    { "id": "mongodb", "name": "MongoDB", "type": "Data", "level": 80 },
-    { "id": "java", "name": "Java", "type": "Core", "level": 78 },
-    { "id": "react", "name": "React", "type": "Frontend", "level": 76 },
-    { "id": "python", "name": "Python", "type": "Analytics", "level": 72 },
-    { "id": "sql", "name": "SQL", "type": "Data", "level": 74 },
-    { "id": "git", "name": "Git", "type": "Tools", "level": 82 }
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "type": "Core",
+      "level": 88
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "type": "Backend",
+      "level": 84
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "type": "Data",
+      "level": 80
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "type": "Core",
+      "level": 78
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "type": "Frontend",
+      "level": 76
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "type": "Analytics",
+      "level": 72
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "type": "Data",
+      "level": 74
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "type": "Tools",
+      "level": 82
+    }
   ],
   "projects": [
     {
@@ -20,8 +60,18 @@
       "category": "Backend",
       "status": "Shipped",
       "difficulty": "Advanced",
-      "stack": ["Node.js", "Express", "MongoDB", "EJS"],
-      "features": ["Custom short codes", "QR code generation", "Click analytics", "Responsive cyber-noir UI"],
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "EJS"
+      ],
+      "features": [
+        "Custom short codes",
+        "QR code generation",
+        "Click analytics",
+        "Responsive cyber-noir UI"
+      ],
       "challenge": "Keeping redirects fast while recording useful click data without complicating the core flow.",
       "solution": "Separated redirect handling from analytics writes and built a small, predictable URL data model.",
       "accent": "violet",
@@ -40,15 +90,27 @@
       "category": "Data",
       "status": "Evolving",
       "difficulty": "Advanced",
-      "stack": ["JavaScript", "Node.js", "Bootstrap", "CSV"],
-      "features": ["CSV ingestion", "Automated min/max KPIs", "Trend detection", "Downloadable reports"],
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "Bootstrap",
+        "CSV"
+      ],
+      "features": [
+        "CSV ingestion",
+        "Automated min/max KPIs",
+        "Trend detection",
+        "Downloadable reports"
+      ],
       "challenge": "Turning arbitrary input columns into useful visual defaults.",
       "solution": "Added lightweight type inference and generated chart suggestions from the shape of each dataset.",
       "accent": "cyan",
-      "featured": true,
+      "featured": false,
       "githubUrl": "",
       "liveUrl": "",
-      "images": []
+      "images": [
+        "/uploads/1783940004483-daaff8e8-screenshot-2026-05-01-at-12-25-15-am.png"
+      ]
     },
     {
       "slug": "message-system",
@@ -60,12 +122,22 @@
       "category": "Backend",
       "status": "Complete",
       "difficulty": "Intermediate",
-      "stack": ["Node.js", "Express", "EJS", "MongoDB"],
-      "features": ["RESTful routes", "Message CRUD", "Mongoose schemas", "Dynamic server rendering"],
+      "stack": [
+        "Node.js",
+        "Express",
+        "EJS",
+        "MongoDB"
+      ],
+      "features": [
+        "RESTful routes",
+        "Message CRUD",
+        "Mongoose schemas",
+        "Dynamic server rendering"
+      ],
       "challenge": "Keeping route responsibilities clear as CRUD behavior expanded.",
       "solution": "Organized the application around resource-focused routes and a consistent schema contract.",
       "accent": "amber",
-      "featured": false,
+      "featured": true,
       "githubUrl": "",
       "liveUrl": "",
       "images": []
