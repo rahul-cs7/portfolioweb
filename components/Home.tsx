@@ -142,8 +142,8 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
       <section className="work section" id="work">
         <div className="container">
           <div className="section-heading work-heading"><div><p className="kicker">04 / FEATURED WORK</p><h2>Projects with a <em>point of view.</em></h2></div><Link className="button ghost" href="/projects">View all projects <Icon name="arrow"/></Link></div>
-          <div className="project-grid">
-            {initialProjects.map((project, index) => <ProjectCard project={project} index={index} key={project.slug}/>)}
+          <div className="project-grid featured-project-grid">
+            {initialProjects.map((project, index) => <ProjectCard project={project} index={index} variant="featured" key={project.slug}/>)}
           </div>
         </div>
       </section>
