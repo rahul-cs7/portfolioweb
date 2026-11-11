@@ -35,3 +35,9 @@ export type Skill = {
   type: string;
   level: number;
 };
+
+export type Resume = {
+  url: string;
+  filename: string;
+  updatedAt: string | null;
+};

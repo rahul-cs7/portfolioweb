@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Project } from "@/lib/types";
-import { Icon } from "./Icons";
+import type { Project } from "@/models/types";
+import { Icon } from "@/views/shared/Icons";
 
 function ProjectSigil({ category }: { category: string }) {
   const kind = category.toLowerCase();

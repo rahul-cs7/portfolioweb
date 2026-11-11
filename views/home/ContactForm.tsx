@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Icon } from "./Icons";
+import { Icon } from "@/views/shared/Icons";
 
 export default function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");

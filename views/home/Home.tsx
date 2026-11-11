@@ -4,28 +4,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Cosmos from "./Cosmos";
 import ContactForm from "./ContactForm";
-import { Icon } from "./Icons";
-import ProjectCard from "./ProjectCard";
-import type { Project, Skill } from "@/lib/types";
-import Brand from "./Brand";
-
-const chapters = [
-  { number: "01", year: "2004 —", title: "Rooted in Bihar", copy: "Curiosity started small: taking things apart, asking why, and imagining what could be built next." },
-  { number: "02", year: "2023", title: "Code became a language", copy: "Computer Science at Uttaranchal University turned curiosity into a craft — algorithms, systems, and a builder’s mindset." },
-  { number: "03", year: "2024", title: "First products, real users", copy: "A frontend internship at OBL Softwares sharpened the fundamentals: responsive interfaces, performance, and thoughtful interaction." },
-  { number: "04", year: "2025 — now", title: "From interfaces to intelligence", copy: "Backend systems, Java applications, data products, and AI research became connected parts of one journey." },
-];
-
-const experiences = [
-  { date: "Jun — Jul 2025", role: "Java Developer", company: "Codec Technologies", copy: "Built Java Swing interfaces connected to MySQL, applying object-oriented design to practical desktop workflows.", tags: ["Java", "Swing", "MySQL", "OOP"] },
-  { date: "Jul 2024", role: "Crowdfunding Volunteer", company: "Muskurahat Foundation", copy: "Raised ₹1,093 through targeted outreach and campaign storytelling while learning to communicate with clarity and empathy.", tags: ["Campaigns", "Communication", "Teamwork"] },
-  { date: "Jun — Jul 2024", role: "Frontend Developer", company: "OBL Softwares Pvt. Ltd.", copy: "Created responsive, interactive pages and optimized real interfaces for performance and user experience.", tags: ["HTML", "CSS", "JavaScript", "Bootstrap"] },
-];
-
-const research = [
-  { code: "PAPER 01 / 2025", title: "AI in sustainable development and climate change mitigation", copy: "Exploring AI-driven solutions for carbon reduction, climate resilience, renewable energy, and intelligent resource management.", topics: ["Sustainability", "AI", "Climate"] },
-  { code: "PAPER 02 / 2025", title: "AI for early detection and intervention in mental health disorders", copy: "Studying machine learning, NLP, predictive analytics, wearables, and the ethical constraints of digital healthcare.", topics: ["Mental health", "NLP", "Ethics"] },
-];
+import { Icon } from "@/views/shared/Icons";
+import ProjectCard from "@/views/projects/ProjectCard";
+import type { Project, Skill } from "@/models/types";
+import { chapters, experiences, research } from "@/models/homeContent";
+import Brand from "@/views/shared/Brand";
 
 export default function Home({ initialProjects, skills }: { initialProjects: Project[]; skills: Skill[] }) {
   const [menu, setMenu] = useState(false);
@@ -50,7 +33,7 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
       skills: "JavaScript · Node.js · React · MongoDB · Java · SQL · Python",
       projects: "Brevio · BizNova · Message System",
       contact: "rahuluu2327@gmail.com · Dehradun, India",
-      resume: "Open /resume.pdf to view the latest résumé.",
+      resume: "Open /resume to view the latest résumé.",
       help: "Commands: whoami, skills, projects, contact, resume, clear",
       adminlogin: "Admin access unlocked. Use the new navbar icon to open the secure dashboard.",
     };
@@ -83,7 +66,7 @@ export default function Home({ initialProjects, skills }: { initialProjects: Pro
           <p className="eyebrow reveal"><span className="pulse"/> Available for opportunities · 2026</p>
           <h1 className="hero-title"><span>Engineering ideas</span><span>into <em>useful</em> digital products.</span></h1>
           <p className="hero-copy">I’m Rahul Kumar — a full-stack developer and researcher exploring the space between thoughtful interfaces, resilient systems, and responsible AI.</p>
-          <div className="hero-actions"><a className="button primary" href="#work">Explore my work <Icon name="arrow" /></a><a className="button ghost" href="/resume.pdf" target="_blank">View résumé <Icon name="external" /></a></div>
+          <div className="hero-actions"><a className="button primary" href="#work">Explore my work <Icon name="arrow" /></a><a className="button ghost" href="/resume" target="_blank">View résumé <Icon name="external" /></a></div>
           <div className="hero-meta"><span><b>03+</b> shipped projects</span><span><b>02</b> research papers</span><span><b>8.57</b> CGPA</span></div>
         </div>
         <div className="scroll-cue"><span>Scroll to explore</span><i/></div>

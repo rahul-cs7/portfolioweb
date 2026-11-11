@@ -2,9 +2,9 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { Project } from "@/lib/types";
+import type { Project } from "@/models/types";
 import ProjectCard from "./ProjectCard";
-import Brand from "./Brand";
+import Brand from "@/views/shared/Brand";
 
 export default function ProjectArchive({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState("All");
